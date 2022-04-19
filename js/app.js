@@ -14,17 +14,19 @@ const searchURL = BASE_URL+'/search/movie?'+API_KEY;
 
 const getColor = (vote)=>{
 
-    if(vote >=8){
+    // if(vote >=8){
 
-        return 'green';
+    //     return 'green';
     
-    }else if(vote >= 5){
+    // }else if(vote >= 5){
 
-        return 'orange';
+    //     return 'orange';
     
-    }else{
-        return 'red';
-    }
+    // }else{
+    //     return 'red';
+    // }
+
+    return (vote>=8) ? 'green': (vote>=5) ? 'orange' : 'red';
 }
 
 const showMovies =(data)=>{
